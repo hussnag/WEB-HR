@@ -1,0 +1,60 @@
+<app-page-header [title]='title'></app-page-header>
+<p-toolbar>
+    <div class="ui-toolbar-group-left">
+        <button pButton type="button" label="New" icon="fa fa-plus" class="ui-button-info"></button>
+        <button pButton type="button" label="Edit" icon="fa fa-pencil" class="ui-button-success"></button>
+        <button pButton type="button" label="Save" icon="fa fa-floppy-o" class="ui-button-success"></button>
+        <button pButton type="button" label="List" icon="fa fa-list" class="ui-button-info"></button>
+        <button pButton type="button" label="Cancel" class="ui-button-danger" icon="fa fa-ban"></button>
+        <button pButton type="button" label="Print" icon="fa fa-print" class="ui-button-success"></button>
+        <button pButton type="button" class="ui-button-danger" label="Delete" icon="fa fa-close"></button>
+
+    </div>
+</p-toolbar>
+<br><br>
+
+<div class="card card-w-title" [formGroup]='departmentForm'>
+    <div class="p-grid" style="padding-left: 10%;">
+        <div class="p-col-1">
+            <label>Code:</label>
+        </div>
+        <div class="p-col-3">
+            <input type="text" pInputText style="width: 100%;" formControlName="Code" placeholder="--Code--"/>
+            <div class="error" *ngIf="f.Code.touched && f.Code.invalid">
+                <span> Code is Mandatory Field*</span>
+            </div>
+        </div>
+        <div class="p-col-1">
+            <label>Short Order:</label>
+        </div>
+        <div class="p-col-3">
+            <input type="text" pInputText style="width: 100%;" formControlName="ShortOrder" placeholder="--Short Order--" />
+            <div class="error" *ngIf="f.ShortOrder.touched && f.ShortOrder.invalid">
+                <span> Short Order is Mandatory Field*</span>
+            </div>
+        </div>
+    </div>
+    <div class="p-grid" style="padding-left: 10%;">
+        <div class="p-col-1">
+            <label>Department:</label>
+        </div>
+        <div class="p-col-7">
+            <input type="text" pInputText style="width: 100%;" formControlName="Department" placeholder="--Department--" />
+            <div class="error" *ngIf="f.Department.touched && f.Department.invalid">
+                <span> Department is Mandatory Field*</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-grid" style="padding-left: 10%;">
+        <div class="p-col-1">
+            <label>Short Name:</label>
+        </div>
+        <div class="p-col-7">
+            <input type="text" pInputText style="width: 100%;" formControlName="ShortName" placeholder="--Short Name--" />
+            <div class="error" *ngIf="f.ShortName.touched && f.ShortName.invalid">
+                <span> Short Name is Mandatory Field*</span>
+            </div>
+        </div>
+    </div>
+</div>
