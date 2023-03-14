@@ -198,7 +198,16 @@ export class AppMenuComponent implements OnInit {
                   {label: 'Menu1', icon: 'fa fa-fw fa-gear', routerLink: ['/documentation']},
                   {label: 'Menu2', icon: 'fa fa-fw fa-wrench', routerLink: ['/utils']}
               ]
-          }
+          }, {
+            label: 'Transaction', icon: 'fa fa-fw fa-book',
+            items: [
+              {
+                label: 'Loan Entry', icon: 'fa fa-fw fa-sign-in', routerLink: ['/transaction/Loanentry']
+            },
+                {label: 'Menu1', icon: 'fa fa-fw fa-gear', routerLink: ['/documentation']},
+                {label: 'Menu2', icon: 'fa fa-fw fa-wrench', routerLink: ['/utils']}
+            ]
+        },
       ];
   }
 

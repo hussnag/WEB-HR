@@ -1,1 +1,124 @@
-<p>vehiclemaster works!</p>
+<app-page-header [title]='title'></app-page-header>
+<p-toolbar>
+    <div class="ui-toolbar-group-left">
+        <button pButton type="button" label="Add" icon="fa fa-plus" class="ui-button-info"></button>
+        <button pButton type="button" label="Edit" icon="fa fa-pencil" class="ui-button-success"></button>
+        <button pButton type="button" class="ui-button-danger" label="Cancel" icon="fa fa-close"></button>
+        <button pButton type="button" label="Save" icon="fa fa-floppy-o" class="ui-button-success"></button>
+        <button pButton type="button" label="List" icon="fa fa-list" class="ui-button-info"></button>
+        <button pButton type="button" label="Delete" icon="fa fa-trash" class="ui-button-success"></button>
+        <button pButton type="button" class="ui-button-danger" label="Exit" icon="fa fa-ban"></button>
+    </div>
+</p-toolbar>
+<br><br>
+
+<div class="card card-w-title" [formGroup]='vehiclemasterForm'>
+    <div class="p-grid" style="padding-left: 10%;">
+        <div class="p-col-1">
+            <label>ID:</label>
+        </div>
+        <div class="p-col-3">
+            <input type="text" pInputText style="width: 100%;" formControlName="ID" placeholder="--ID--" />
+            <div class="error" *ngIf="f.ID.touched && f.ID.invalid">
+                <span> ID is Mandatory Field*</span>
+            </div>
+        </div>
+        <div class="p-col-1">
+            <label>Plate NO:</label>
+        </div>
+        <div class="p-col-3">
+            <input type="text" pInputText style="width: 100%;" formControlName="PlateNO" placeholder="--PlateNO--" />
+            <div class="error" *ngIf="f.PlateNO.touched && f.PlateNO.invalid">
+                <span> PlateNO is Mandatory Field*</span>
+            </div>
+        </div>
+    </div>
+    <div class="p-grid" style="padding-left: 10%;">
+        <div class="p-col-1">
+            <label>Plate NO:</label>
+        </div>
+        <div class="p-col-7">
+            <input type="text" pInputText style="width: 100%;" formControlName="PlateNO" placeholder="--PlateNO--" />
+            <div class="error" *ngIf="f.PlateNO.touched && f.PlateNO.invalid">
+                <span> PlateNO is Mandatory Field*</span>
+            </div>
+        </div>
+    </div>
+    <div class="p-grid" style="padding-left: 10%;">
+        <div class="p-col-1">
+            <label>Veh Type:</label>
+        </div>
+        <div class="p-col-7">
+            <input type="text" pInputText style="width: 100%;" formControlName="Vehtype" placeholder="--Vehtype--" />
+            <div class="error" *ngIf="f.Vehtype.touched && f.Vehtype.invalid">
+                <span> Vehtype is Mandatory Field*</span>
+            </div>
+        </div>
+    </div>
+    <div class="p-grid" style="padding-left: 10%;">
+        <div class="p-col-1">
+            <label>Engine No:</label>
+        </div>
+        <div class="p-col-7">
+            <input type="text" pInputText style="width: 100%;" formControlName="EngineNo" placeholder="--EngineNo--" />
+            <div class="error" *ngIf="f.EngineNo.touched && f.EngineNo.invalid">
+                <span> EngineNo is Mandatory Field*</span>
+            </div>
+        </div>
+    </div>
+    <div class="p-grid" style="padding-left: 10%;">
+        <div class="p-col-1">
+            <label>Chasis No:</label>
+        </div>
+        <div class="p-col-7">
+            <input type="text" pInputText style="width: 100%;" formControlName="ChasisNo" placeholder="--ChasisNo--" />
+            <div class="error" *ngIf="f.ChasisNo.touched && f.ChasisNo.invalid">
+                <span> ChasisNo is Mandatory Field*</span>
+            </div>
+        </div>
+    </div>
+    <div class="p-grid" style="padding-left: 10%;">
+        <div class="p-col-1">
+            <label>Type:</label>
+        </div>
+        <div class="p-col-7">
+            <input type="text" pInputText style="width: 100%;" formControlName="Type" placeholder="--Type--" />
+            <div class="error" *ngIf="f.Type.touched && f.Type.invalid">
+                <span> Type is Mandatory Field*</span>
+            </div>
+        </div>
+    </div>
+    <div class="p-grid" style="padding-left: 10%;">
+        <div class="p-col-1">
+            <label>Assign To:</label>
+        </div>
+        <div class="p-col-7">
+            <input type="text" pInputText style="width: 100%;" formControlName="AssignTo" placeholder="--AssignTo--" />
+            <div class="error" *ngIf="f.AssignTo.touched && f.AssignTo.invalid">
+                <span> AssignTo is Mandatory Field*</span>
+            </div>
+        </div>
+    </div>
+    <div class="p-grid" style="padding-left: 10%;">
+        <div class="p-col-1">
+            <label>Location:</label>
+        </div>
+        <div class="p-col-7">
+            <input type="text" pInputText style="width: 100%;" formControlName="Location" placeholder="--Location--" />
+            <div class="error" *ngIf="f.Location.touched && f.Location.invalid">
+                <span> Location is Mandatory Field*</span>
+            </div>
+        </div>
+    </div>
+    <div class="p-grid" style="padding-left: 10%;">
+        <div class="p-col-1">
+            <label>Company:</label>
+        </div>
+        <div class="p-col-7">
+            <input type="text" pInputText style="width: 100%;" formControlName="Company" placeholder="--Company--" />
+            <div class="error" *ngIf="f.Company.touched && f.Company.invalid">
+                <span> Company is Mandatory Field*</span>
+            </div>
+        </div>
+    </div>
+</div>

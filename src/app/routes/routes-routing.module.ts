@@ -47,7 +47,12 @@ const routes: Routes = [
     loadChildren: () => import('./view/storewarehouse/storewarehouse.module').then(se => se.StorewarehouseModule)
 
   },
-  { path: '**', redirectTo: '' },
+  {
+    path: 'transaction',
+    loadChildren: () => import('./view/trancsaction/trancsaction.module').then(tr => tr.TrancsactionModule)
+    
+  },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

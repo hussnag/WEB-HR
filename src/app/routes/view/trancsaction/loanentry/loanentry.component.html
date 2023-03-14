@@ -1,0 +1,119 @@
+<!-- <app-page-header [title]='title'></app-page-header> -->
+<div class='matero-page-header'>
+    <div class="matero-page-header-inner">
+        <h2 class="matero-page-title">{{title}}</h2>
+    </div>
+</div>
+<p-toolbar>
+    <div class="ui-toolbar-group-left">
+        <button pButton type="button" label="New" icon="fa fa-plus" class="ui-button-info"></button>
+        <button pButton type="button" label="Edit" icon="fa fa-pencil" class="ui-button-success"></button>
+        <button pButton type="button" label="Save" icon="fa fa-floppy-o" class="ui-button-success"></button>
+        <button pButton type="button" label="List" icon="fa fa-list" class="ui-button-info"></button>
+        <button pButton type="button" label="Print" icon="fa fa-print" class="ui-button-success"></button>
+        <button pButton type="button" class="ui-button-danger" label="Cancel" icon="fa fa-close"></button>
+
+    </div>
+</p-toolbar>
+<br><br>
+
+<div class="card card-w-title" [formGroup]='loanentryForm'>
+    <p-panel>
+        <div class="p-grid">
+            <div class="p-col-1 p-md-1 p-lg-1">
+                <label> Loan Code:</label>
+            </div>
+            <div class="p-col-2 p-md-2 p-lg-2">
+                <input type="text" pInputText [style]="{width:'100%'}" formControlName="LoanCode"
+                    placeholder="--LoanCode--" />
+                <div class="error" *ngIf="f.LoanCode.touched && f.LoanCode.invalid">
+                    <span>Loan Code is Mandatory Field*</span>
+                </div>
+            </div>
+            <div class="p-col-1 p-md-1 p-lg-1">
+                <label>Loan Type</label>
+            </div>
+            <div class="p-col-3 p-md-3 p-lg-3">
+                <p-dropdown formControlName="LoanType" [style]="{width:'100%'}" filter="true">
+                </p-dropdown>
+                <div class="error" *ngIf="f.LoanType.touched && f.LoanType.invalid">
+                    Loan Type is Invalid Entry
+                </div>
+
+            </div>
+            <div class="p-col-1 p-md-1 p-lg-1">
+                <label> Loan Amount:</label>
+            </div>
+            <div class="p-col-3 p-md-3 p-lg-3">
+                <input type="text" pInputText [style]="{width:'100%'}" formControlName="Loanamount"
+                    placeholder="--Loanamount--" />
+                <div class="error" *ngIf="f.Loanamount.touched && f.Loanamount.invalid">
+                    <span>Loan Amount is Mandatory Field*</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="p-grid">
+            <div class="p-col-1 p-md-1 p-lg-1">
+                <label>Issue Date:</label>
+            </div>
+            <div class="p-col-3 p-md-3 p-lg-3">
+                <p-calendar [showIcon]="true" formControlName="IssueDate" style="width: 100%;">
+                </p-calendar>
+                <div class="error" *ngIf="f.IssueDate.touched && f.IssueDate.invalid">
+                    <span> Issue Date is Mandatory Field*</span>
+                </div>
+            </div>
+            <div class="p-col-1 p-md-1 p-lg-1">
+                <label>Loan Start Date:</label>
+            </div>
+            <div class="p-col-3 p-md-3 p-lg-3">
+                <p-calendar [showIcon]="true" formControlName="Loanstartdate" [style]="{width:'100%'}">
+                </p-calendar>
+                <div class="error" *ngIf="f.Loanstartdate.touched && f.Loanstartdate.invalid">
+                    Loanstartdate is Invalid Entry
+                </div>
+            </div>
+            <div class="p-col-1 p-md-1 p-lg-1">
+                <label>REF NO:</label>
+            </div>
+            <div class="p-col-2 p-md-2 p-lg-2">
+                <input type="text" pInputText [style]="{width:'100%'}" formControlName="REFNO"
+                    placeholder="--REFNO--" />
+                <div class="error" *ngIf="f.REFNO.touched && f.REFNO.invalid">
+                    <span>REF NO is Mandatory Field*</span>
+                </div>
+            </div>
+        </div>
+        <div class="p-grid">
+            <div class="p-col-1 p-md-1 p-lg-1">
+                <label>NO OF INST:</label>
+            </div>
+            <div class="p-col-3 p-md-3 p-lg-3">
+                <input type="text" pInputText [style]="{width:'100%'}" formControlName="NOOFINST"
+                    placeholder="--NOOFINST--" />
+                <div class="error" *ngIf="f.NOOFINST.touched && f.NOOFINST.invalid">
+                    <span> NO OF INST is Mandatory Field*</span>
+                </div>
+            </div>
+            <div class="p-col-1 p-md-1 p-lg-1">
+                <label>INST AMOUNT:</label>
+            </div>
+            <div class="p-col-3 p-md-3 p-lg-3">
+                <input type="text" pInputText [style]="{width:'100%'}" formControlName="INSTAMOUNT"
+                    placeholder="--INSTAMOUNT--" />
+                <div class="error" *ngIf="f.INSTAMOUNT.touched && f.INSTAMOUNT.invalid">
+                    <span>INST AMOUNT is Mandatory Field*</span>
+                </div>
+            </div>
+        </div>
+    </p-panel>
+    <p-panel>
+
+        <div class="p-grid">
+
+        </div>
+
+
+    </p-panel>
+</div>
